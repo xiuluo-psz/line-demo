@@ -1,30 +1,26 @@
 export default {
+  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'LIFF Starter',
+    title: 'line-demo-v2',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    'vant/lib/index.css'
-  ],
+  css: ['vant/lib/index.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '@/plugins/vant',
     '~/plugins/liff-init.client.js', // add liff.init() plugin
-    // '~/plugins/composition-api', // 不需要。会重复引入
-    { src: '~/plugins/vant-ui.js', ssr: true}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -32,18 +28,22 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxt/typescript-build'
+    // https://go.nuxtjs.dev/typescript
+    '@nuxt/typescript-build',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // https://go.nuxtjs.dev/axios
+    '@nuxtjs/axios',
   ],
 
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {
+    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+    baseURL: '/',
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    transpile: [/^vant-ui/]
-  },
-  env: {
-    LIFF_ID: process.env.LIFF_ID,
-  },
+  build: {},
 }
