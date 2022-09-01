@@ -1,6 +1,7 @@
 <template>
   <div>
     {{ fullName }}
+    <van-field v-model="message" :label="fullName"/>
   </div>
 </template>
 
@@ -21,7 +22,7 @@ export default defineComponent({
   },
 
   setup(props, context) {
-    const fullName = "dd"; // computed(() => `${props.user.firstName} `);
+    const fullName = "dd";
     const message = "dcsds";
     return {
       fullName,
