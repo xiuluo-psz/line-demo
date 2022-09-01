@@ -30,8 +30,10 @@ export default defineComponent({
     }
   },
   data() {
+    const t:String = 'dd'
+    const tmp = t + 'hh'
     return {
-      sms: '123'
+      sms: tmp
     }
   }
 })

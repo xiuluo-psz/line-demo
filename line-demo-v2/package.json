@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@line/liff": "^2.16.0",
+    "@nuxt/types": "^2.15.8",
+    "@nuxt/typescript-build": "^2.1.0",
     "core-js": "^3.15.1",
     "nuxt": "^2.15.7",
     "vant": "^2.12.48"
