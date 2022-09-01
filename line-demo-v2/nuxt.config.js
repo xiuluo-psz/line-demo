@@ -23,6 +23,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/liff-init.client.js', // add liff.init() plugin
+    // '~/plugins/composition-api', // 不需要。会重复引入
     { src: '~/plugins/vant-ui.js', ssr: true}
   ],
 
