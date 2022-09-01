@@ -24,18 +24,27 @@ export default defineComponent({
   setup() {
     const setupmsg = ref('setup变量')
     return {
-      setupmsg
+      setupmsg,
     }
   },
   asyncData() {
     return {
-      nuxtmsg: 'nuxt拓展变量'
+      nuxtmsg: 'nuxt拓展变量',
     }
   },
   data() {
     return {
-      msg: 'vue2普通变量'
+      msg: 'vue2普通变量',
     }
+  },
+  mounted() {
+    this.$liffInit
+      .then((res: any) => {
+        console.warn('success', res)
+      })
+      .catch((err: any) => {
+        console.warn('error', err)
+      })
   },
 })
 </script>

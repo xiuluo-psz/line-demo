@@ -5,7 +5,7 @@
 // import NPM version LIFF JS SDK
 import liff from '@line/liff';
 
-export default (context, inject) => {
+export default (_, inject) => {
   // You can access liff object as this.$liff by inject()
   inject('liff', liff);
 
