@@ -2,8 +2,8 @@
   <div class="container">
     <div>
       <NuxtLogo />
-      <h1>{{ msg }}-{{ nuxtmsg }}-{{ setupmsg }}</h1>
-      <h1 class="title">Welcome to the Vant + Nuxt.js template</h1>
+      <h5>{{ msg }}-{{ nuxtmsg }}-{{ setupmsg }}</h5>
+      <h5 class="title">Welcome to the Vant + Nuxt.js template</h5>
       <div class="links">
         <van-button type="primary" url="https://nuxtjs.org/">
           Documentation
@@ -22,7 +22,7 @@ import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   setup() {
-    const setupmsg = ref('setup变量')
+    const setupmsg = ref<string>('setup变量')
     return {
       setupmsg,
     }
@@ -52,7 +52,7 @@ export default defineComponent({
 <style>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,8 +63,8 @@ export default defineComponent({
   font-family: Quicksand, 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
-  font-weight: 300;
-  font-size: 100px;
+  /* font-weight: 300;
+  font-size: 100px; */
   color: #35495e;
   letter-spacing: 1px;
 }
